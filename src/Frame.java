@@ -25,7 +25,9 @@ import javax.swing.Timer;
 public class Frame extends JPanel implements ActionListener, KeyListener{
 	JFrame f = new JFrame("Pong");
 	public void paint(Graphics g) {
-		
+		super.paintComponent(g);
+		g.fillRect(0, 150, 30, 200);
+		g.fillRect(956, 150, 30, 200);
 	}
 	public static void main(String[] arg) {
 		Frame f = new Frame();
@@ -33,7 +35,7 @@ public class Frame extends JPanel implements ActionListener, KeyListener{
 	}
 	public Frame() {
 		f.setSize(new Dimension(1000, 600));
-		f.setBackground(Color.blue);
+		f.setBackground(Color.white);
 		f.add(this);
 		f.setResizable(false);
 		f.setLayout(new GridLayout(1,2));
@@ -43,15 +45,15 @@ public class Frame extends JPanel implements ActionListener, KeyListener{
 		
 	}
 	@Override
-	public void keyPressed(KeyEvent e) {
+	public void keyPressed(KeyEvent key) {
 		// TODO Auto-generated method stub
-		int key = e.getKeyCode();
+		
 		
 	} 
 	@Override
-	public void keyReleased(KeyEvent e) {
+	public void keyReleased(KeyEvent key) {
 		// TODO Auto-generated method stub
-		int key = e.getKeyCode();
+	
 	}
 	@Override
 	public void keyTyped(KeyEvent e) {
